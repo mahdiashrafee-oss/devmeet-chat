@@ -17,12 +17,12 @@ func login(w http.ResponseWriter, r *http.Request){
 			http.Redirect(w, r, "/", http.StatusSeeOther)
 			return
 		}
-
+	}
 		tmpl, _ := template.ParseFiles("templates/login.html")
 
 	tmpl.Execute(w, nil)
 
-	}
+	
 } 
 func homepage(w http.ResponseWriter, r *http.Request){
 	tmpl, _ :=  template.ParseFiles("templates/index.html")
